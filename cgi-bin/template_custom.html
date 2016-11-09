@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sureify Insurance Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../../css/styles_website.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon@2x.ico" />
+    <link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.css" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="../assets/fonts/proxima_nova/font.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/millenial.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/responsive-home.css" />
+        <!-- bootstrap & fontawesome -->
+
+    <!-- page specific plugin styles -->
+    <link rel="stylesheet" href="../assets/css/select2.css" />
+
+    <!-- text fonts -->
+
+    <!-- ace styles -->
+    <!-- Inspectlet -->
+    
+    <?php renderPartial('common/inspectlet') ?>
+    
+    <script type="text/javascript" src="../assets/js/jquery.js"></script>
+    <script type="text/javascript" src="../assets/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/js/retina.js"></script>
+    <script type="text/javascript" src="../assets/js/html.js"></script>
+    <script type="text/javascript" src="../assets/js/dropdown.js"></script>
+    <script type="text/javascript" src="../assets/js/validation.js"></script>
+    <script type="text/javascript" src="../assets/js/user.js"></script>
+    <script type="text/javascript" src="../assets/js/home.js"></script>
+    <script type="text/javascript" src="../assets/js/ga.js"></script>
+    <script type="text/javascript" src="http://swip.codylindley.com/jquery.tooltip.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.validate.min.js"></script>
+    <link href="../assets/css/responsive-menu.css" rel="stylesheet">
+      <!-- Load Responsive Menu -->
+      <script src="../assets/js/responsive-menu.js" type="text/javascript"></script>
+
+      <!-- Setup Responsive Menu -->
+      <script>
+          jQuery(function ($) {
+              var menu = $('.rm-nav').rMenu({
+                  minWidth: '960px',
+
+              });
+          });
+      </script>
+    <script>
+        $(window).scroll(function() {
+          if ($(this).scrollTop() > 100) {
+            $('.trans-before').addClass('trans-after');
+          } else {
+            $('.trans-before').removeClass('trans-after');
+          }
+        });
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();
+      });$(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();
+      });
+              /*Hotjar Tracking Code for www.sureify.com*/
+      (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:101344,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+      </script>
+      <style type="text/css">
+        .left50 {
+          padding-left: 50px !important;
+        }
+      </style>
+
+      <script language="JavaScript" type="text/javascript">
+      <!--
+      function getbest (ambest, company, compcode)
+      {
+        document.comparisonform.AmBest.value = ambest;
+        document.comparisonform.CompanyName.value = company;
+        document.comparisonform.CompanyCode.value = compcode;
+        document.comparisonform.OnClick=abc=window.open('','reason','width=700,height=500,left=20,top=20,scrollbars=yes');
+        document.comparisonform.target='reason';
+        abc.focus();
+        document.comparisonform.submit();
+      }
+      -->
+      </script>  
+
+  </head>
+
+  <body>
+  
+    <div class="header navbar navbar-fixed-top trans-before <?php echo $border_hidden;?>">
+      <div id="wrapper" class="<?php echo $class;?>" >
+        <div class="min_left">
+          <a href="../" id="header_logo" class="logo"></a>
+        </div>
+          <!-- START Responsive Menu HTML -->
+          <div class="min_center">
+            <div class="rm-container">
+                <a class="rm-toggle rm-button rm-nojs" href="#">Menu</a>
+                 <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+
+                <nav class="rm-nav rm-nojs rm-lighten <?php echo $class_hidden?>">
+                   <ul class="menu_items left50">
+                <li class="li_padding_top">
+                  
+                </li>
+                <li  class="hidden_contact_desk f700 cf">
+                  <a href="tel:1-855-331-6467">Call us</a>
+                </li>
+              </ul>
+                </nav>
+            </div><!-- .rm-container -->
+        </div>
+        <div class="min_right">
+          <ul class="contact_item">
+            <li  class="nav_color">Call us: <span class="fw500">1-855-331-6467</span></li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+          <!-- End Responsive Menu HTML -->
+      </div>
+    </div>
+
+  <!--COMPULIFE CODE START-->
+  <div>
+  
+<br><br>
+
+<h2>Comparison Results</h2>
+
+<table border="0">
+
+<tr>
+<td><p class="right"><b>Today's Date is:</b></td>  
+<td><p>&nbsp;$nowmonth$ $nowday$, $nowyear$</td>
+<td width="380" rowspan="6" align="center">
+<form name="healthform" action ="cqsl.cgi" method="POST">
+<table class="default_table" align="center">
+<tr class="default_header">
+<td class="default_header">&nbsp;To see if you can qualify for&nbsp;<br>these products click on:&nbsp;
+</td>
+</tr>
+<tr class="default_sub_header_center">
+<td class="default_sub_header_center">
+<input type="hidden" name="ZipCode" value="$zipcode$">
+<input type="hidden" name="DoingHealth" value="ON">
+<input type="hidden" name="State" value="$origstate$">
+<input type="hidden" name="Birthday" value="$origday$">
+<input type="hidden" name="BirthMonth" value="$origmonth$">
+<input type="hidden" name="BirthYear" value="$origyear$">
+<input type="hidden" name="Health" value="$orighealth$">
+<input type="hidden" name="FaceAmount" value="$newface$">
+<input type="hidden" name="Sex" value="$origsex$">
+<input type="hidden" name="Smoker" value="$origsmoker$">
+<input type="hidden" name="NewCategory" value="$origcat$">
+<input type="hidden" name="SortOverride1" value="$origsortoverride1$">
+<input type="hidden" name="ModeUsed" value="$origmodeused$">
+<input type="hidden" name="UserLocation" value="$userlocation$">
+<input type="hidden" name="UserLocation" value="$userlocation$">
+<input type="hidden" name="TEMPLATEFILE" value="$templatefile$">
+<input type="hidden" name="HTEMPLATEFILE" value="$htemplatefile$">
+<input type="hidden" name="email" value="$email$">
+<input type="hidden" name="css" value="$css$">
+<input type="submit" name="InitHealth" value="Health Analyzer">
+</td>
+</tr>
+</table>
+</td>
+</form>
+</tr>
+
+
+<tr>
+<td><p class="right"><b>Premiums for:</b></td>
+<td><p>&nbsp;$sex$, $health$, $smoker$</td>
+</tr>
+
+<tr>
+<td><p class="right"><b>Birthdate:</b></td> 
+<td><p>&nbsp;$month$ $day$, $year$</td>
+</tr>
+
+<tr>
+<td><p class="right"><b>Age:</b></td>
+<td><p>&nbsp;$aage$&nbsp;&nbsp;&nbsp;<b>Age Nearest:</b>&nbsp;&nbsp;$nage$</td>
+</tr>
+
+<tr> 
+<td><p class="right"><b>State:</b></td> 
+<td><p>&nbsp;$state$</td>
+</tr>
+
+<tr>
+<td><p class="right"><b>Face Amount:</b></td>  
+<td><p><b>&nbsp;$$face$</b></td>
+</tr>
+
+<!--<tr>
+<td><p class="right"<b>Premium Mode:</b></td>  
+<td>&nbsp;$modeusedlc$</td>
+</tr> -->
+
+</table>
+
+<br><br>
+
+<table border="0">
+<tr>
+<td>
+<form name="comparisonform" action="cqsl.cgi" method="Post">
+
+&nbsp;&nbsp;<input type="button" VALUE="Run Another Quote" onClick="history.go(-1);return true;"></form>
+</td>
+
+
+<td>
+<form name="sidebysideform" action="cqsl.cgi" method="POST">
+
+<!-- pass some environment variables onto the next page -->
+<input type="hidden" name="State" value="$origstate$">
+<input type="hidden" name="Birthday" value="$origday$">
+<input type="hidden" name="BirthMonth" value="$origmonth$">
+<input type="hidden" name="BirthYear" value="$origyear$">
+<input type="hidden" name="Health" value="$orighealth$">
+<input type="hidden" name="ModeUsed" value="A">
+<input type="hidden" name="FaceAmount" value="$newface$">
+<input type="hidden" name="Sex" value="$origsex$">
+<input type="hidden" name="Smoker" value="$origsmoker$">
+<input type="hidden" name="NewCategory" value="$origcat$">
+<input type="hidden" name="CompanySelected" value="$origcompany$">
+<input type="hidden" name="EmbeddedAccums" value="ON">
+<!-- <input type="hidden" name="EmbeddedIndexes" value="ON">
+<input type="hidden" name="EmbeddedPvac" value="ON"> -->
+<input type="hidden" name="EmbeddedAccumColor" value="#FF0000">
+<!-- <input type="hidden" name="EmbeddedIndexColor" value="#CC22AA">
+<input type="hidden" name="EmbeddedPvacColor" value="#A5910F"> -->
+<input type="hidden" name="PvacIntRate" value="6.0">
+<input type="hidden" name="PvacTaxRate" value="30.0">
+<input type="hidden" name="UserLocation" value="$userlocation$">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="SideBySide" value="Spreadsheet Results">
+</form>
+</td>
+</tr>
+</table>
+
+
+
+<br>
+
+ <div class="row" id="quoteresults" style="display:none;">
+     <div class="col-md-2"></div>   
+     <div class="col-md-8">
+      
+      <!-- The next line represents the start of a comparison section -->
+      <!-- It must be on a line by itself -->
+      $comparisonrepeat$
+
+      <div class="panel panel-primary">
+        
+
+        <div class="panel-heading">$title$</div>
+        <div class="panel-body text-center" id="response_data">
+            
+
+            <div class="row">
+              <div class="col-md-3"><h5>Company</h5></div>
+              <div class="col-md-3"><h5>Annual</h5></div>
+              <div class="col-md-3"><h5>$ModeUsedC$</h5></div>
+              <div class="col-md-3"><h5>Product Name</h5></div>
+              <div class="col-md-3"><h5>Health Category</h5></div>
+            </div>
+            <hr/>
+            
+            $prodline=50$           
+
+            <div class="row">
+              <div class="col-md-3 text-center">$company$</div>
+              <div class="col-md-3 text-center">
+                <div class="Row$rowEvenOdd$" style="border-bottom:none;" align="right"><b>$$premiumAnnual$</font></b></div>
+              </div>
+              <div class="col-md-3 text-center">
+                <div class="Row$rowEvenOdd$" style="border-bottom:none;" align="right"><b>$$premium$</font></b></div>
+              </div>
+              <div class="col-md-3 text-center">$product$</div>
+              <div class="col-md-3 text-center">$healthcat$</div>
+            </div>  
+
+            $/prodline$
+
+        </div>
+      </div>
+
+      $/comparisonrepeat$
+      <!-- The above line represents the end of a comparison section -->
+      <!-- It must be on a line by itself -->
+
+
+    </div>
+    <div class="col-md-2"></div>
+ </div>
+
+
+<br>
+
+<!-- The next line represents the start of a comparison section -->
+<!-- It must be on a line by itself -->
+$comparisonrepeat$
+
+<table class="default_table" width="100%">
+<tr>
+<td class="default_header" colspan="5">$title$</td>
+</tr>
+
+<tr>
+<!--<td class="default_sub_header" width="2%"></td>-->
+<td class="default_sub_header" width="31%">Company Name</td>
+<!-- <td class="default_sub_header" width="4%">AMB</td> -->
+<td class="default_sub_header" width="6%">Annual</td>
+<td class="default_sub_header" width="6%">$ModeUsedC$</td>
+<!-- <td width="3%">&nbsp;</td> -->
+<td class="default_sub_header" width="27%">Product Name</td>
+<!-- <td class="default_sub_header" width="3%">&nbsp;</td> -->
+<td class="default_sub_header" width="23%">Health Category</td>
+</tr>
+
+$prodline=50$
+
+<tr class="Row$rowEvenOdd$">
+<td class="Row$rowEvenOdd$" width="31%">$company$</td>
+<!-- <td class="Row$rowEvenOdd$" width="4%"> --><!-- <a href="javascript:getbest('$ambest$','$company$','$comp$')"> --><!-- <b>$amb$</b> --><!-- </a> --><!-- </td> -->
+<td class="Row$rowEvenOdd$" width="6%"><div class="Row$rowEvenOdd$" style="border-bottom:none;" align="right"><b>$$premiumAnnual$</font></b></div></td>
+<td class="Row$rowEvenOdd$" width="6%"><div class="Row$rowEvenOdd$" style="border-bottom:none;" align="right"><b>$$premium$</font></b></div></td>
+<!-- <td class="Row$rowEvenOdd$" width="3%"><font color="#0148CB">$guar$</td> -->
+<td class="Row$rowEvenOdd$" width="27%">$product$</td>
+<!-- <td class="Row$rowEvenOdd$" width="3%"><font color="#0148CB">$rgpfpp$</font>&nbsp;</td> -->
+<td class="Row$rowEvenOdd$" width="23%">$healthcat$</td>
+</tr>
+$/prodline$
+</table>
+
+
+$/comparisonrepeat$
+<!-- The above line represents the end of a comparison section -->
+<!-- It must be on a line by itself -->
+
+
+</form>
+
+
+<!-- <p><i><font color="#0148CB">** and gtd</font></i></b> are indicators
+
+that identify whether the premium quoted is guaranteed for the level period
+
+that you are comparing.
+
+<p><b><i><font color="#0148CB">**</font></i></b> - indicates a premium that 
+is <b>NOT</b> guaranteed for the level term period.  For this product, the 
+life company reserves the right to increase the premium before the end of 
+the initial level term period.  Make sure that you ask your agent for 
+an authorized life company illustration which will give you more information
+about this premium and what guarantees the company does provide.
+
+<p><b><i><font color="#0148CB">gtd</font></i></b> - indicates a premium that 
+is guaranteed for the level term period.  
+
+<p><b><i><font color="#0148CB">P+, Pf, R+, and Rg</font></i></b> are indicators
+
+that will help you determine the underwriting (health and lifestyle) criteria
+
+that you will need to satisfy in order to qualify for the premium shown.
+
+
+<p><b><i><font color="#0148CB">P+</font></i></b> - indicates a rate for
+
+an individual in very preferred (preferred plus) health. A company offering
+
+a P+ premium also offers a preferred (Pf) and a regular (Rg) health premium.
+
+Pf premiums are less difficult to qualify for. Rg premiums are much less
+
+difficult to qualify for.
+
+
+
+<p><b><i><font color="#0148CB">Pf</font></i></b> - indicates a rate for
+
+an individual in preferred health. A company offering a Pf premium also
+
+offers a regular (Rg) health premium. Rg premiums are less difficult to
+
+qualify for.
+
+
+
+<p><b><i><font color="#0148CB">R+</font></i></b> - indicates a rate for
+
+an individual in somewhat better health than regular (Rg), but not what 
+
+the life insurance industry typically terms "preferred health".  
+
+A company offering an R+ premium also offers a regular (Rg) health premium. 
+
+Rg premiums are less difficult to qualify for.
+
+
+
+
+<p><b><i><font color="#0148CB">Rg</font></i></b> - indicates a rate for
+
+a person in normal health who does not have any medical or lifestyle condition
+
+which would increase their future risk of dying.
+
+
+
+<p><b><i><font color="#0148CB">Example:&nbsp; </font></i></b>A person who
+
+has moderately elevated blood pressure may not qualify for P+, Pf or R+ premium
+
+rates, but they might qualify for Rg. A private pilot may not qualify for
+
+P+ or Pf premiums, but might qualify for R+ or Rg rates. You will need to speak
+
+to the company or an insurance agent for more details. Premiums quoted
+
+for smokers already take into account that the insured person smokes and
+
+therefore has a greater risk of death than a non-smokers. Premiums offered
+
+to smokers are already higher than those for non-smokers. --> 
+
+
+
+
+
+<h3>Differences Between Companies and Products</h3>
+
+
+<p>The following is a brief list of some of the other factors that you will need to consider when comparing products and companies:
+
+
+
+<p><b><font color="#0148CB">Company Financial Strength</font></b> - Not all life insurance companies are the same. Some are very large financially, some are small. Some companies are in better financial condition than others.  The longer the level term period, the more important it is to consider how healthy and strong the life insurance company is. Make sure that you ask your agent for information about the financial ratings for the companies that you are considering.
+
+
+
+<p><b><font color="#0148CB">Premium Guarantees</font></b> - Are the premiums for the policy fully guaranteed?  Not all companies fully guarantee the initial premium for the entire level period. If two products have the same price, but one is guaranteed while the other is not, the guaranteed product would be better.
+
+
+
+<p><b><font color="#0148CB">Renewal Period</font></b> - Most level term policies have the ability to renew the policy beyond the initial level premium period. Two products may offer identical premiums for the initial level period, and yet there may be an enormous difference in renewal costs beyond the level period.  No Lapse U/L products have term-like 
+premiums which offer initial guaranteed level premiums comparable to the level periods of corresponding guaranteed level term policies.  For the intial level period, U/L policies with term-like guaranteed premiums provide comparable premium/death benefits as the 
+corresponding level term products.  However, the ability to renew those U/L policies, and the premiums that you might pay to renew those policies, can differ significantly from a corresponding level premium term policy.  
+
+
+
+<p><b><font color="#0148CB">Conversion Period</font></b> - Many term policies offer the ability to exchange the term policy for a whole life policy without having to again medically qualify. Should your health change, and should you not be able to buy a new policy elsewhere, you may find the conversion option important. Not all policies offer the same time period for conversion to take place, and not all give you access to the same types of whole life.
+
+
+
+<p><b><font color="#0148CB">Comparing Different Level Periods</font></b> - Should you be buying a 10 year term product, a 20 year term or a 30 year term? How long do you need the insurance? If you buy a 10 year term, how will future cost increases after the 10th year compare to a longer level term plan such as 20 year term? If you only need insurance for 10 years, you could be wasting your money buying a 20 year term product. You should discuss why you are buying the insurance with your agent and let them give you the benefit of their knowledge and experience. 
+
+
+
+<p><b><font color="#0148CB">Monthly Payment Options</font></b> - Many consumers pay their term insurance premiums on a monthly basis. The least expensive product based upon the annual premium may not have the lowest monthly, quarterly or semi-annual premium. Many life insurance companies charge extra to pay more frequently than annually, and some charge more than others.
+
+
+
+<p><b><font color="#0148CB">Health Risk Conditions</font></b> - Each life insurance company establishes its own health and lifestyle requirements to determine what premiums you may qualify for. Slightly high blood pressure may disqualify you for one company's preferred health premium, but might be acceptable to obtain another company's preferred health premium. Your agent will be able to give you more guidance.
+
+
+
+<p><b><font color="#0148CB">Smoking Considerations</font></b> - Not all life companies define smoking the same way. If you have never smoked or used tobacco products in any way, then a non-smoking comparison will include products that you can qualify for based upon non-smoking. If you were a smoker and later quit, then how long ago that you quit may limit your choices.  If you do smoke, some companies may offer products with better premiums depending on how little you smoke, or whether you smoke cigars or pipe rather than cigarettes. You will need to discuss all of this with your agent.
+
+
+
+<p><b><i><font color="#0148CB">There are other considerations that you will want to discuss with your agent.</font></i></b>
+
+
+<h3>About This Comparison</h3>
+
+
+
+<p>The information used in this comparison has been taken from the rate cards and rate manuals which life companies routinely publish and distribute to life agents and brokers. To the best of our ability we have done everything we can to ensure that the information contained in this comparison is up-to-date and accurate. However, <b><i><font color="#0148CB">WE CANNOT GUARANTEE ACCURACY.</font></i></b>
+
+
+
+<p>In the event that there is a discrepancy between the information contained in this comparison, and any life company authorized illustration and/or policy, <b><i><font color="#0148CB">the policy shall govern</font></i></b>.
+
+
+
+<p class="center"><b>Powered by <a class="nocolor" href="http://www.compulife.com">COMPULIFE</a><sup>&reg;</sup></b>
+
+  </div>
+  <!--COMPULIFE CODE END-->
+    
+    <div class="clear"></div>
+  <footer>
+  <div class="black_bg h100 mt150"></div>
+
+      <center>
+        
+        <div class="clear"></div>
+        <div class="footer_menu f300">
+          <ul class="<?php echo $class1;?>">
+            <li class="padding-40"><a>Press</a></li>
+            <li class="padding-40"><a href="../contact">Contact</a></li>
+            <li class="padding-40"><a href="../coming_soon">Blog</a></li>
+            <li class="padding-50"><a href="../faq">FAQ</a></li>
+            <li class="padding-40"><a href="../about">About</a></li>
+            <li class="padding-45"><a href="../coming_soon">Claims</a></li>
+            <li class="padding-40"><a href="../coming_soon" class="login_color">Login</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer_icon_menu mt30">
+        <center>
+          <ul>
+            
+            <li>
+              <a href="https://twitter.com/sureify" target="_blank">
+                <div class="icon_twitter"></div>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/sureify-com" target="_blank">
+              <div class="icon_linkedin"></div>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/sureifylife" target="_blank">
+              <div class="icon_facebook"></div>
+            </li>
+          </ul>
+        </center>
+        </div>
+        <div class="clear"></div>
+        <div class="mt30">
+          <a href="/" id="footer_logo" class="logo"></a>
+        </div>
+        <!--<div class="contact">
+          <div class="h4">Call us: <span class="fw400">1-855-331-6467</span></div>
+          <div class="h4">email us: <span class="fw400">welcome@sureify.com</span></div>
+        </div>
+        <div class="footer_terms_menu mt30">
+          <ul>
+            <li>
+              Privacy Policy
+            </li>
+            <li>
+              Terms of use
+            </li>
+          </ul>
+        </div>-->
+        <div class="footer_text mt30 pb20">
+          <p class="cf f12 fw300">
+            &copy; 2015 Sureify Labs Inc. Sureify and the Sureify logo are trademarks of Sureify Labs Inc. <br> Sureify's trademark may be used only with permission from Sureify. All rights reserved.
+          </p>
+        </div>
+        <div class="clear"></div>
+      </center>
+    </footer>
+
+    <div class="overlay_section">
+      <div class="overlay">
+        <div class="overlay_close">&times;</div>
+        <div class="inner_container">
+          <div class="overlay_top">
+            <div class="h4 centered desktop">Got questions? Want to know more?</div>
+            <div class="h5 centered mobile">Leave us your info.<br/>We have more to share with you.</div>
+          </div>
+          
+          <div style="margin-top: -40px;">
+            <?php renderPartial('common/sign', array('origin' => 'v' . $version . '-get-in-touch', 'popup' => true)) ?>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="version" data-version="v<?= $version ?>"></div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var home = new Home();
+        home.getInTouch();
+        home.closeOverlay();
+        home.finalUserInfo();
+      });
+    </script>
+
+    <!-- Olark -->
+    <?php renderPartial('common/olark') ?>
+    <script src="../assets/bootstrap/js/bootstrap.js"></script>
+
+    <!-- page specific plugin scripts -->
+    <script src="../assets/js/fuelux.wizard.js"></script>
+    <script src="../assets/js/select2.js"></script>
+    
+    <!-- ace scripts -->
+    <script src="../assets/js/elements.wizard.js"></script>
+    <script src="../assets/js/ace.js"></script>
+    <script src="../assets/js/app_process.js"></script>
+    <script src="../assets/js/formValidation.min.js"></script>
+    <script src="../assets/js/formvalidationframework.min.js"></script>
+    <script src="../assets/js/jquery.mask.min.js"></script>
+  </body>
+</html>

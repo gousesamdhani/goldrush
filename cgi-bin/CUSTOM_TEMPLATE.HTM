@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sureify Insurance Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../assets/compulife/css/styles_website.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon@2x.ico" />
+    <link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.css" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="../assets/fonts/proxima_nova/font.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/millenial.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/responsive-home.css" />
+        <!-- bootstrap & fontawesome -->
+
+    <!-- page specific plugin styles -->
+    <link rel="stylesheet" href="../assets/css/select2.css" />
+
+    <!-- text fonts -->
+
+    <!-- ace styles -->
+    <!-- Inspectlet -->
+    
+    <?php renderPartial('common/inspectlet') ?>
+    
+    <script type="text/javascript" src="../assets/js/jquery.js"></script>
+    <script type="text/javascript" src="../assets/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/js/retina.js"></script>
+    <script type="text/javascript" src="../assets/js/html.js"></script>
+    <script type="text/javascript" src="../assets/js/dropdown.js"></script>
+    <script type="text/javascript" src="../assets/js/validation.js"></script>
+    <script type="text/javascript" src="../assets/js/user.js"></script>
+    <script type="text/javascript" src="../assets/js/home.js"></script>
+    <script type="text/javascript" src="../assets/js/ga.js"></script>
+    <script type="text/javascript" src="http://swip.codylindley.com/jquery.tooltip.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.validate.min.js"></script>
+    <link href="../assets/css/responsive-menu.css" rel="stylesheet">
+      <!-- Load Responsive Menu -->
+      <script src="../assets/js/responsive-menu.js" type="text/javascript"></script>
+
+      <!-- Setup Responsive Menu -->
+      <script>
+          jQuery(function ($) {
+              var menu = $('.rm-nav').rMenu({
+                  minWidth: '960px',
+
+              });
+          });
+      </script>
+    <script>
+        $(window).scroll(function() {
+          if ($(this).scrollTop() > 100) {
+            $('.trans-before').addClass('trans-after');
+          } else {
+            $('.trans-before').removeClass('trans-after');
+          }
+        });
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();
+      });$(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();
+      });
+              /*Hotjar Tracking Code for www.sureify.com*/
+      (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:101344,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+      </script>
+      <style type="text/css">
+        .left50 {
+          padding-left: 50px !important;
+        }
+      </style>
+
+      <script language="JavaScript" type="text/javascript">
+      <!--
+      function getbest (ambest, company, compcode)
+      {
+        document.comparisonform.AmBest.value = ambest;
+        document.comparisonform.CompanyName.value = company;
+        document.comparisonform.CompanyCode.value = compcode;
+        document.comparisonform.OnClick=abc=window.open('','reason','width=700,height=500,left=20,top=20,scrollbars=yes');
+        document.comparisonform.target='reason';
+        abc.focus();
+        document.comparisonform.submit();
+      }
+      -->
+      </script>  
+
+  </head>
+
+  <body>
+  
+    <div class="header navbar navbar-fixed-top trans-before <?php echo $border_hidden;?>">
+      <div id="wrapper" class="<?php echo $class;?>" >
+        <div class="min_left">
+          <a href="../" id="header_logo" class="logo"></a>
+        </div>
+          <!-- START Responsive Menu HTML -->
+          <div class="min_center">
+            <div class="rm-container">
+                <a class="rm-toggle rm-button rm-nojs" href="#">Menu</a>
+                 <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+
+                <nav class="rm-nav rm-nojs rm-lighten <?php echo $class_hidden?>">
+                   <ul class="menu_items left50">
+                <li class="li_padding_top">
+                  
+                </li>
+                <li  class="hidden_contact_desk f700 cf">
+                  <a href="tel:1-855-331-6467">Call us</a>
+                </li>
+              </ul>
+                </nav>
+            </div><!-- .rm-container -->
+        </div>
+        <div class="min_right">
+          <ul class="contact_item">
+            <li  class="nav_color">Call us: <span class="fw500">1-855-331-6467</span></li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+          <!-- End Responsive Menu HTML -->
+      </div>
+    </div>
+
+  <!--COMPULIFE CODE START-->
+  <div>
+  
+<br><br>
+
+<h2>Comparison Results</h2>
+
+<table border="0">
+
+<tr>
+<td><p class="right"><b>Today's Date is:</b></td>  
+<td><p>&nbsp;$nowmonth$ $nowday$, $nowyear$</td>
+<td width="380" rowspan="6" align="center">
+
+</tr>
+
+
+<tr>
+<td><p class="right"><b>Premiums for:</b></td>
+<td><p>&nbsp;$sex$, $health$, $smoker$</td>
+</tr>
+
+<tr>
+<td><p class="right"><b>Birthdate:</b></td> 
+<td><p>&nbsp;$month$ $day$, $year$</td>
+</tr>
+
+<tr>
+<td><p class="right"><b>Age:</b></td>
+<td><p>&nbsp;$aage$&nbsp;&nbsp;&nbsp;<b>Age Nearest:</b>&nbsp;&nbsp;$nage$</td>
+</tr>
+
+<tr> 
+<td><p class="right"><b>State:</b></td> 
+<td><p>&nbsp;$state$</td>
+</tr>
+
+<tr>
+<td><p class="right"><b>Face Amount:</b></td>  
+<td><p><b>&nbsp;$$face$</b></td>
+</tr>
+
+<!--<tr>
+<td><p class="right"<b>Premium Mode:</b></td>  
+<td>&nbsp;$modeusedlc$</td>
+</tr> -->
+
+</table>
+
+<br>
+<table border="0">
+<tr>
+<td>
+<form name="comparisonform" action="cqsl.cgi" method="POST">
+
+&nbsp;&nbsp;<input type="button" VALUE="Run Another Quote" onClick="history.go(-1);return true;"></form>
+</td>
+
+
+<td>
+<form name="sidebysideform" action="cqsl.cgi" method="POST">
+
+<!-- pass some environment variables onto the next page -->
+<input type="hidden" name="State" value="$origstate$">
+<input type="hidden" name="Birthday" value="$origday$">
+<input type="hidden" name="BirthMonth" value="$origmonth$">
+<input type="hidden" name="BirthYear" value="$origyear$">
+<input type="hidden" name="Health" value="$orighealth$">
+<input type="hidden" name="ModeUsed" value="A">
+<input type="hidden" name="FaceAmount" value="$newface$">
+<input type="hidden" name="Sex" value="$origsex$">
+<input type="hidden" name="Smoker" value="$origsmoker$">
+<input type="hidden" name="NewCategory" value="$origcat$">
+<input type="hidden" name="CompanySelected" value="$origcompany$">
+<input type="hidden" name="EmbeddedAccums" value="ON">
+<!-- <input type="hidden" name="EmbeddedIndexes" value="ON">
+<input type="hidden" name="EmbeddedPvac" value="ON"> -->
+<input type="hidden" name="EmbeddedAccumColor" value="#FF0000">
+<!-- <input type="hidden" name="EmbeddedIndexColor" value="#CC22AA">
+<input type="hidden" name="EmbeddedPvacColor" value="#A5910F"> -->
+<input type="hidden" name="PvacIntRate" value="6.0">
+<input type="hidden" name="PvacTaxRate" value="30.0">
+<input type="hidden" name="UserLocation" value="$userlocation$">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--<input type="submit" name="SideBySide" value="Spreadsheet Results">-->
+</form>
+
+</td>
+</tr>
+</table>
+
+
+<br>
+
+<!-- The next line represents the start of a comparison section -->
+<!-- It must be on a line by itself -->
+$comparisonrepeat$
+
+<table class="default_table" width="90%">
+<tr>
+<td class="default_header" colspan="7">$title$</td>
+</tr>
+
+<tr>
+<!--<td class="default_sub_header" width="2%"></td>-->
+<td class="default_sub_header" width="15%">Company Logo</td>
+<td class="default_sub_header" width="25%">Company Name</td>
+ <td class="default_sub_header" width="4%">AMB</td>
+<td class="default_sub_header" width="6%">Annual</td>
+<td class="default_sub_header" width="6%">$ModeUsedC$</td>
+<!-- <td class="default_sub_header" width="3%">&nbsp;</td> -->
+<td class="default_sub_header" width="27%">Product Name</td>
+<!-- <td class="default_sub_header" width="3%">&nbsp;</td> -->
+<td class="default_sub_header" width="20%">Health Category</td>
+<td class="default_sub_header">Request Application</td>
+</tr>
+
+<!-- The following line defines the format for outputing the company and products, (max length is 400)-->
+
+$prodline=50$
+
+<form action="/quotes/requestapplication" method="POST">
+
+<tr class="Row$rowEvenOdd$" HEIGHT="56">
+<td style="text-align:center; border-bottom: 1px solid #808080; border-right: 1px solid #808080; background-color: #FFFFFF;"><img src="../assets/compulife/images/logos/$COMP$.gif" valign="middle" align="center" alt="logo" border="0" vspace="3" hspace="3"></td>
+<td class="Row$rowEvenOdd$" width="31%">$company$</td>
+ <td class="Row$rowEvenOdd$" width="4%"> <a href="javascript:getbest('$ambest$','$company$','$comp$')">  <b>$amb$</b> </a>  </td> 
+<td class="Row$rowEvenOdd$" width="6%"><div class="Row$rowEvenOdd$" style="border-bottom:none;" align="right"><b>$$premiumAnnual$</font></b></div></td>
+<td class="Row$rowEvenOdd$" width="6%"><div class="Row$rowEvenOdd$" style="border-bottom:none;" align="right"><b>$$premium$</font></b></div></td>
+<!-- <td class="Row$rowEvenOdd$" width="3%"><font color="#0148CB">$guar$</td> -->
+<td class="Row$rowEvenOdd$" width="27%">$product$</td>
+<!-- <td class="Row$rowEvenOdd$" width="3%"><font color="#0148CB">$rgpfpp$</font>&nbsp;</td> -->
+<td class="Row$rowEvenOdd$" width="23%">$healthcat$</td>
+<td class="Row$rowEvenOdd$" width="23%">
+<input type="hidden" name="Sex" value="$sex$">
+<input type="hidden" name="ActualAge" value="$aage$">
+<input type="hidden" name="NearestAge" value="$nage$">
+<input type="hidden" name="Birthday" value="$day$">
+<input type="hidden" name="BirthMonth" value="$month$">
+<input type="hidden" name="BirthYear" value="$year$">
+<input type="hidden" name="Smoker" value="$smoker$">
+<input type="hidden" name="FaceAmount" value="$face$">
+<input type="hidden" name="HealthCategory" value="$healthcat$">
+<input type="hidden" name="Health" value="$health$">
+<input type="hidden" name="ModeUsed" value="$modeused$">
+<input type="hidden" name="State" value="$state$">
+<input type="hidden" name="Category" value="$cat$">
+<input type="hidden" name="Company" value="$company$">
+<input type="hidden" name="Product" value="$product$">
+<input type="hidden" name="PremiumAnnual" value="$PremiumAnnual$">
+<input type="hidden" name="PremiumMode" value="$Premium$">
+<input type="hidden" name="UserLocation" value="$userlocation$">
+<input type="hidden" name="email" value="$email$">
+<input type="hidden" name="css" value="$css$">
+<input type="submit" name="Submit" value="Request Application">
+</td>
+</tr>
+
+</form>
+
+$/prodline$
+</table>
+
+
+$/comparisonrepeat$
+<!-- The above line represents the end of a comparison section -->
+<!-- It must be on a line by itself -->
+
+<input type="hidden" name="Sex" value="$sex$">
+<input type="hidden" name="ActualAge" value="$aage$">
+<input type="hidden" name="NearestAge" value="$nage$">
+<input type="hidden" name="Birthday" value="$day$">
+<input type="hidden" name="BirthMonth" value="$month$">
+<input type="hidden" name="BirthYear" value="$year$">
+<input type="hidden" name="Smoker" value="$smoker$">
+<input type="hidden" name="FaceAmount" value="$face$">
+<input type="hidden" name="HealthCategory" value="$healthcat$">
+<input type="hidden" name="Health" value="$health$">
+<input type="hidden" name="ModeUsed" value="$modeused$">
+<input type="hidden" name="State" value="$state$">
+<input type="hidden" name="Category" value="$cat$">
+<input type="hidden" name="Company" value="$company$">
+<input type="hidden" name="Product" value="$product$">
+<input type="hidden" name="PremiumAnnual" value="$PremiumAnnual$">
+<input type="hidden" name="PremiumMode" value="$Premium$">
+<input type="hidden" name="UserLocation" value="$userlocation$">
+<input type="hidden" name="TEMPLATEFILE" value="$templatefile$">
+<input type="hidden" name="HTEMPLATEFILE" value="$htemplatefile$">
+<input type="hidden" name="email" value="$email$">
+<input type="hidden" name="css" value="$css$">
+
+</form>
+
+
+
+
+
+
+
+    <div id="version" data-version="v<?= $version ?>"></div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var home = new Home();
+        home.getInTouch();
+        home.closeOverlay();
+        home.finalUserInfo();
+      });
+    </script>
+
+    <!-- Olark -->
+    <?php renderPartial('common/olark') ?>
+    <script src="../assets/bootstrap/js/bootstrap.js"></script>
+
+    <!-- page specific plugin scripts -->
+    <script src="../assets/js/fuelux.wizard.js"></script>
+    <script src="../assets/js/select2.js"></script>
+    
+    <!-- ace scripts -->
+    <script src="../assets/js/elements.wizard.js"></script>
+    <script src="../assets/js/ace.js"></script>
+    <script src="../assets/js/app_process.js"></script>
+    <script src="../assets/js/formValidation.min.js"></script>
+    <script src="../assets/js/formvalidationframework.min.js"></script>
+    <script src="../assets/js/jquery.mask.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sureify Insurance Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon@2x.ico" />
+    <link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.css" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="../assets/fonts/proxima_nova/font.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/millenial.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/responsive-home.css" />
+        <!-- bootstrap & fontawesome -->
+
+    <!-- page specific plugin styles -->
+    <link rel="stylesheet" href="../assets/css/select2.css" />
+
+    <!-- text fonts -->
+
+    <!-- ace styles -->
+    <!-- Inspectlet -->
+    
+     
+ 
+    <script type="text/javascript" src="../assets/js/jquery.js"></script>
+    <script type="text/javascript" src="../assets/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/js/retina.js"></script>
+    <script type="text/javascript" src="../assets/js/html.js"></script>
+    <script type="text/javascript" src="../assets/js/dropdown.js"></script>
+    <script type="text/javascript" src="../assets/js/validation.js"></script>
+    <script type="text/javascript" src="../assets/js/user.js"></script>
+    <script type="text/javascript" src="../assets/js/home.js"></script>
+    <script type="text/javascript" src="../assets/js/ga.js"></script>
+    <script type="text/javascript" src="http://swip.codylindley.com/jquery.tooltip.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.validate.min.js"></script>
+    <link href="../assets/css/responsive-menu.css" rel="stylesheet">
+    <!-- Load Responsive Menu -->
+    <script src="../assets/js/responsive-menu.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+    function addHInput(id,name,value)
+    {
+    if (value=="") return;
+    var aform = document.getElementById(id);
+    var field = document.createElement("input");
+      field.setAttribute("type","hidden");
+      field.setAttribute("value",value);
+      field.setAttribute("name",name);
+      aform.appendChild(field);
+    }
+
+    function addBasicInputFields(id)
+    {
+      addHInput(id,"State","$origstate$");
+      addHInput(id,"ActualAge","$aage$");
+      addHInput(id,"NearestAge","$nage$");
+      addHInput(id,"Birthday","$origday$");
+      addHInput(id,"BirthMonth","$origmonth$");
+      addHInput(id,"BirthYear","$origyear$");
+      addHInput(id,"Sex","$sex$");
+      addHInput(id,"Smoker","$origsmoker$");
+      addHInput(id,"Health","$orighealth$");
+      addHInput(id,"FaceAmount","$origface$");
+       
+    }
+
+
+    function ProdLineSubmit(id,Company, Product,ModeUsed,Cat,PremiumAnnual,Premium,HealthCat, logo)
+    {
+      addHInput(id,"logo",logo);
+      addHInput(id,"Company",Company);
+      addHInput(id,"Product",Product);
+      addHInput(id,"ModeUsed",ModeUsed);
+      addHInput(id,"Category",Cat);
+      addHInput(id,"PremiumAnnual",PremiumAnnual);
+      addHInput(id,"PremiumMode",Premium);
+      addHInput(id,"HealthCat",HealthCat);
+      addBasicInputFields(id);
+      return true;
+    }
+    </script>
+
+      <!-- Setup Responsive Menu -->
+      <script>
+          jQuery(function ($) {
+              var menu = $('.rm-nav').rMenu({
+                  minWidth: '960px',
+
+              });
+          });
+      </script>
+    <script>
+        $(window).scroll(function() {
+          if ($(this).scrollTop() > 100) {
+            $('.trans-before').addClass('trans-after');
+          } else {
+            $('.trans-before').removeClass('trans-after');
+          }
+        });
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();
+      });$(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();
+      });
+              /*Hotjar Tracking Code for www.sureify.com*/
+      (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:101344,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+      </script>
+      <style type="text/css">
+        .left50 {
+          padding-left: 50px !important;
+        }
+      </style>
+  </head>
+
+  <body>
+
+    <div id="getquote_process" class="header navbar navbar-fixed-top trans-before">
+      <div id="wrapper" class="<?php echo $class;?>" >
+        <div class="min_left">
+          <a href="../" id="header_logo" class="logo"></a>
+        </div>
+        <div class="min_right quote_layout">
+        
+          <ul class="contact_item fr">
+            <li  class="text_color">Need help? Call us at: <span class="fw700 blue_text">1-885-331-6467</span></li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+          <!-- End Responsive Menu HTML -->
+      </div>
+    </div>
+
+
+
+
+ <!--CONTENT STARTS HERE-->
+
+
+          <link href="../assets/css/slider.css" media="all" rel="stylesheet">
+          <script src="../assets/js/slider.js"></script>
+          <script src="../assets/js/slider-main.js"></script>
+          <style type="text/css">
+              .blue_color {
+                  color: #557ac1;
+              }
+              .slider-handle {
+                  background-color: #557ac1;
+              }
+              .slider.slider-horizontal .slider-handle {
+                  margin-top:-15px;
+              }
+              .footer_tex {
+                  color: #979797;
+              }
+              .dollor_money{
+                  color: #e1a246;
+                  font-size: 32px;
+              }
+              .duration_year {
+                  color: #585858;
+                  font-size: 14px;
+              }
+              .get_quote_div {
+                  background-color: #f2f2f2;
+                  border-radius: 6px;
+                  padding: 20px 0 20px 0;
+              }
+              .lh20 {
+                  line-height:20px;
+              }
+              .img_bg {
+                  background-color: #fff;
+                  padding: 15px 0 15px 15px;
+              }
+              .select_button {
+                  background-color: #557ac1;
+                  border-radius: 40px;
+                  padding:7px 28px;
+              }
+              .arrow-circle {
+                  width: 30px;
+                  height: 30px;
+                  background-color: #d8d8d8;
+                  border-radius: 18px;
+              }
+              .arrow-img-pad {
+                  padding: 6px 2px 0px 9px;
+                  cursor: pointer;
+              }
+              .get_quote_toggle_div {
+                  background-color: #e3e3e3;
+                  border-radius: 0 6px 6px 0;
+              }
+              .pl15 {
+                  padding-left:15px;
+              }
+              .pl30 {
+                  padding-left: 30px;
+              }
+              .no-padding {
+                  padding-left:0px;
+              }
+              .get_quote_title {
+                  color:#979797;
+              }
+              .choice-head {
+                  background-color: gainsboro;
+                  border-radius: 6px 6px 0 0;
+                  padding:5px;
+              }
+              .choice-body {
+                  background-color: #f2f2f2;
+                  border-radius: 0 6px 6px 0;
+              }
+              .choice-body img {
+                  background-color:#fff;
+                  padding: 15px;
+              }
+              .chioce-border {
+                  border-bottom:1px solid gainsboro;
+              }
+          </style>
+          <div class="container mt150 mb20">
+              <center>
+                  <div class="idealsteps-nav-width idealsteps-nav">
+                      <ul id="quote_process">
+                          <li class="basic_li basic_info"><a>Basic Info</a></li>
+                          <!--<li class="health_li health_btn"><a>Health Info</a></li>-->
+                          <li class="get_quote_li get_quotebtn active_btn"><a>Get Quote</a></li>
+                          <li class="apply_li cofirm_btn"><a>Apply</a></li>
+                      </ul>
+                  </div>
+              </center>
+          </div>
+          <div class="container" id="basic">
+           
+          </div>
+
+          <div class="container" id="health">
+               
+          </div>    
+
+          <div class="" id="quote">
+              <div class="col-md-12">
+                  <div class="col-md-2"></div>
+                  <div class="col-md-8">
+                      <div class="f24 fw300 text_color tc">We have your quotes ready!</div>
+                  </div>
+                  <div class="col-md-2"></div>
+              </div>
+              
+              <div class="col-md-12 pt20">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-10">
+
+                    <!-- The next line represents the start of a comparison section -->
+                    <!-- It must be on a line by itself -->
+                    $comparisonrepeat$
+
+                    $nonsmoketable$
+                    <!--The following line defines the format for outputing the company and products, (max length is 400)-->
+
+                      <div class="col-md-12 footer_tex">
+                          <div class="col-md-2 f16">$ModeUsedC$</div>
+                          <div class="col-md-5 f16">Insurance Provider</div>
+                          <div class="col-md-1 f16 text-center">&nbsp;</div>
+                          <div class="col-md-1">Rating</div>
+                          <div class="col-md-3">&nbsp;</div>
+                      </div>
+
+                    <!-- The following line defines the format for outputing the company and products, (max length is 400)-->
+
+
+                    <!--
+                    -->
+                    $prodline=50$
+
+                    <form id="$comp$$prod$" name="comparisonform" action="/quotes/apply" method="POST">
+                    <script type="text/javascript">
+                       ProdLineSubmit('$comp$$prod$','$company$','$Product$','$modeused$','$cat$','$PremiumAnnual$','$Premium$','$healthcat$','$COMP$');
+                    </script>
+
+                      <div id="get_quote_div_parentreplace">
+                          <div class="get_quote_div col-md-12 mt10">
+                              <div class="col-md-2 text-center pt10">
+                                  <div class="dollor_money f700">$$premium$</div>
+                                  <div class="duration_year f300">$$premiumAnnual$/year</div>
+                              </div>
+                              <div class="col-md-5">
+                                  <div class="col-md-5 img_bg">
+                                      <img src="../assets/compulife/images/logos/$COMP$.gif" valign="middle" align="center" alt="logo" border="0" vspace="3" hspace="3">
+                                  </div>
+                                  <div class="col-md-7 f16 f300 lh20 pt10">
+                                      $company$
+                                  </div>
+                              </div>
+
+                              <div class="col-md-1 mt10 pt10 text-center">
+                                  
+                              </div>
+                              <div class="col-md-1 mt10 pt10 text-center">
+                                <!--  A+ -->
+                              </div>
+                                
+                              <div class="col-md-3 pt5 mt10">
+                                  <div class="col-md-8">
+                                      <button type="submit" class="select_button lh20 f700 f16" value="SELECT">SELECT</button>
+                                  </div>
+                                  <div class="col-md-1"></div>
+                                  <div class="col-md-3 arrow-circle arrow-img-pad">
+                                      <img src="../assets/images/triangle-10.png">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="get_quote_toggle_div col-md-12 pt10 pb10 pl15" style="display:none">
+                              <div class="col-md-3 lh20 pl30 f16 f300">
+                                  <div class="get_quote_title">Plan Name</div>
+                                  <div class="text_color">$product$</div>
+                              </div>
+                              <div class="col-md-4 lh20 pl30 f16 f300">
+                                   <div class="get_quote_title">Health Category</div>
+                                  <div class="text_color">$healthcat$</div>
+                              </div>
+                              <div class="col-md-3 h20 pl30 f16 f300">
+                                   <div class="get_quote_title">Term Coverage</div>
+                                  <div class="text_color">$$origface$</div>
+                              </div>
+                              <div class="col-md-2 lh20 pl30 f16 f300">
+                                   <div class="get_quote_title">Term Length</div>
+                                  <div class="text_color">$cat$</div>
+                              </div>
+                          </div>
+                      </div>
+                      </form>
+
+                      $/prodline$  
+
+                      $/comparisonrepeat$
+                      
+                  </div>
+                  <div class="col-md-1"></div>
+              </div>
+          </div>
+          <div class="container" id="confirm">
+              
+          </div>
+          <script type="text/javascript">
+          $(document).ready(function(){
+              $('#basic').hide();
+              $('#health').hide();
+              $('#quote').show();
+              $('#confirm').hide();
+              
+              var i=1;
+              $('*[id*=get_quote_div_parentreplace]:visible').each(function() {
+                  $(this).attr("id","get_quote_div_"+i);
+                  i++;
+              });
+
+              $('.arrow-circle').click(function() {
+                  var img_src = $(this).find("img").attr('src');
+                  if (img_src.search('triangle-10') != -1) {
+                      $(this).find("img").attr('src', "../assets/images/up-arrow.png");
+                  } else {
+                       $(this).find("img").attr('src', "../assets/images/triangle-10.png");
+                  }
+
+                  //$(this).parent().parent().parent().toggle('slow');
+                  var new_parent = $(this).parent().parent().parent().attr('id');
+                  $("#"+new_parent+" .get_quote_toggle_div").toggle('slow');
+              });
+          });
+          </script>
+
+
+ <!--CONTENT ENDS HERE-->
+
+
+
+
+    <div class="clear"></div>
+  <footer>
+  <div class="black_bg h100 mt150"></div>
+
+      <center>
+        
+        <div class="clear"></div>
+        <div class="footer_menu f300">
+          <ul class="<?php echo $class1;?>">
+            <li class="padding-40"><a>Press</a></li>
+            <li class="padding-40"><a href="../contact">Contact</a></li>
+            <li class="padding-40"><a href="../coming_soon">Blog</a></li>
+            <li class="padding-50"><a href="../faq">FAQ</a></li>
+            <li class="padding-40"><a href="../about">About</a></li>
+            <li class="padding-45"><a href="../coming_soon">Claims</a></li>
+            <li class="padding-40"><a href="../coming_soon" class="login_color">Login</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer_icon_menu mt30">
+        <center>
+          <ul>
+            
+            <li>
+              <a href="https://twitter.com/sureify" target="_blank">
+                <div class="icon_twitter"></div>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/sureify-com" target="_blank">
+              <div class="icon_linkedin"></div>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/sureifylife" target="_blank">
+              <div class="icon_facebook"></div>
+            </li>
+          </ul>
+        </center>
+        </div>
+        <div class="clear"></div>
+        <div class="mt30">
+          <a href="/" id="footer_logo" class="logo"></a>
+        </div>
+        <div class="footer_text mt30 pb20">
+          <p class="cf f12 fw300">
+            &copy; 2016 Sureify Labs Inc. Sureify and the Sureify logo are trademarks of Sureify Labs Inc. <br> Sureify's trademark may be used only with permission from Sureify. All rights reserved.
+          </p>
+        </div>
+        <div class="clear"></div>
+      </center>
+    </footer>
+
+    <div class="overlay_section">
+      <div class="overlay">
+        <div class="overlay_close">&times;</div>
+        <div class="inner_container">
+          <div class="overlay_top">
+            <div class="h4 centered desktop">Got questions? Want to know more?</div>
+            <div class="h5 centered mobile">Leave us your info.<br/>We have more to share with you.</div>
+          </div>
+          
+          <div style="margin-top: -40px;">
+            <?php renderPartial('common/sign', array('origin' => 'v' . $version . '-get-in-touch', 'popup' => true)) ?>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="version" data-version="v<?= $version ?>"></div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var home = new Home();
+        home.getInTouch();
+        home.closeOverlay();
+        home.finalUserInfo();
+      });
+    </script>
+
+    <!-- Olark -->
+    <?php renderPartial('common/olark') ?>
+    <script src="../assets/bootstrap/js/bootstrap.js"></script>
+
+    <!-- page specific plugin scripts -->
+    <script src="../assets/js/fuelux.wizard.js"></script>
+    <script src="../assets/js/select2.js"></script>
+    
+    <!-- ace scripts -->
+    <script src="../assets/js/elements.wizard.js"></script>
+    <script src="../assets/js/ace.js"></script>
+    <script src="../assets/js/app_process.js"></script>
+    <script src="../assets/js/formValidation.min.js"></script>
+    <script src="../assets/js/formvalidationframework.min.js"></script>
+    <script src="../assets/js/jquery.mask.min.js"></script>
+  </body>
+</html>

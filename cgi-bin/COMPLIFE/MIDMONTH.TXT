@@ -1,0 +1,163 @@
+The following changes have been made to the January 2016  
+edition of the Compulife Quotation System:
+
+5.  Forms changes only
+
+January 5th - No changes to rate files.  Forms changes
+only.
+
+
+4.  Pruco Life - product change
+
+January 4th - Pru has added new rates for older ages
+for its PruTerm one product.
+
+
+3.  Pruco Life of NJ - product change
+
+January 4th - Pru has added new rates for older ages
+for its PruTerm one product.
+
+
+2.  United of Omaha - new rates
+
+January 1st - United of Omaha has introduced new rates
+for its Guaranteed Universal Life to age 90, 95, 100, 
+105 and 121.
+
+
+1.  Companion Life - new rates
+
+January 1st - Companion Life has introduced new rates
+for its Guaranteed Universal Life to age 90, 95, 100, 
+105 and 121.
+
+
+
+================================================================
+
+The following changes were made and were included with the 
+January 2016 monthly update of the Compulife Quotation System:
+
+12.  United Home/Farm Life - product changes
+
+December 17th - Compulife has now added the juvenile
+and preferred rates for the company's Provider 
+Simplified Issue products.  
+
+We have also corrected the products and change
+them to age last.  Some were quoting age nearest.
+
+
+11.  Sagicor Life - no lapse UL - SI
+
+December 16th - Sagicor Life has asked that we 
+identify their no lapse UL products, for issue
+ages up to 65, for face amounts of $400,000 or 
+less, as SI (Simplified Issue).  That change 
+is in this update.
+
+
+10.  Banner Life - new rates
+
+December 14th - Banner Life has introduced new
+rates for its Opterm 10, 15, 20 and 30 products.
+
+
+9.  William Penn Life - new rates
+
+December 14th - William Penn has introduced new
+rates for its Opterm 10, 15, 20 and 30 products.
+
+
+8.  Newest Windows Program - bugs fixed
+
+December 14th - This newest version of the Windows 
+includes some fixes for the Canadian versio of our
+software.  Both countrie use the same program, the
+data files are different.
+
+
+7.  American General Life - new product/rates
+
+December 8th (2) - On December 4th American 
+General introduced a new no lapse UL product 
+called Secure Lifetime GUL III which will be 
+replacing their GUL II.  The company only 
+provided us with the rates earlier today, and
+so we have been working very hard all afternoon
+and evening to get these to you ASAP.
+
+The GUL II will remain available until 
+sometime in February.
+
+
+6.  Newest Windows Program - bugs fixed
+
+December 8th - The Windows program that we released
+on December 4th turned up a bug, and so we re-issued
+the old version very quickly thereafter.  
+
+The bug has been fixed.
+
+You can read more about this updated Windows 
+program in item number 4 below.
+
+
+5.  Stonebridge Life - company removed
+
+December 8th - All business previously done by 
+Stonebridge Life is now being done under 
+Transamerica Premier.
+
+Thanks to the subscriber who brought that to
+our attention, and a 10% coupon has been given.
+
+
+4.  Newest Windows Program
+
+December 4th - This version of the Windows program
+fixes some minor listing bugs, and an indexing bug
+that was still writing index information to the 
+COMP.D0? files.  This meant nothing to the vast
+majority of users, but would have affected those 
+customers using the Internet Engine.
+
+A new internet engine was shipped earlier in the 
+week, and that engine, if updated to a customer's
+server, will be compatible with the changes made
+to the GOWIN.EXE program.
+
+The engines have all been updated on our own servers
+so if you are using the Compulife web quote option,
+you do not need to do anything.
+
+
+3.  Pruco Life - ROP correction
+
+December 4th - We realized that the error we had
+with the ROP calculation was coming from an error
+in the ROP factor table, caused by an error in the 
+ROP factor data entry system.  Bugs of this nature
+need to be tracked down carefully, but we have now
+found and fixed the problem.
+
+To ensure that it did not affect ANY other Pru ROP
+products and face amounts, we have manually re-entered
+all the factors and believe the problem is resolved.
+
+
+2.  Securian Life - new rates
+
+December 1st - The new rates for Minnesota Life
+have now been approved in NY for Securian Life.
+
+
+1.  Pruco Life - ROP premium error
+
+December 1st - An error was found for the ROP
+premiums for Pruco Life's 15 year version.  The
+issue has to do with Female Preferred Plus rates, 
+and we are currently tracking it down as a bug
+with our ROP data entry system.  We have temporarily
+turned off the product until we get it resolved.
