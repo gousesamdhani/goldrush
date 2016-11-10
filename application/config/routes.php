@@ -80,6 +80,9 @@ $route['users/lastsync'] = "api/SyncDevices/lastsync";
 $route['auth'] = "api/v1/auth";
 $route['registration'] = "api/v1/newAuth";
 $route['transact'] = "api/v1/transact";
+$route['usersessions'] = "api/v1/usersessions";
+$route['sales'] = "api/v1/sales";
+$route['stock'] = "api/v1/stock";
 
 
 $route['users/states'] = "api/v1/getStates";

@@ -4,6 +4,8 @@ class v1 extends REST_Controller {
 function __construct() {
 	parent::__construct ();
 	$this->load->model ( 'users' );
+	$this->load->model ( 'sales' );
+	$this->load->model ( 'stock' );
 	$this->load->model ( 'materials_master' );
 	$this->load->helper ( 'url' );
 	$this->load->model ( 'states' );
@@ -66,6 +68,153 @@ function newAuth_post() {
 				), SUCCESS_OK );
 	//echo $user_session_id;
 }
+
+function sales_post() {
+        //capture data from post request
+        //check whether access_toke is in header or body
+        $headers = getallheaders();
+        $access_token = trim( $headers['access_token'] );
+	//$access_token = trim ( $this->input->post('access_token'));
+        
+ 
+        //check whether access_token is valid or not
+        //if not raise badrequest error
+        if($this->users->checkAccessTokenExist($access_token))
+                $this->response ( array (
+                                                'type' => 'states',
+                                                'id' => 'id',
+                                                'data' => $this->states->getAllStates()
+                                ), SUCCESS_OK );
+        else
+                $this->generateErrorMessage(BAD_REQUEST, "Invalid Access Token");
+
+	$sold_by = trim ( $this->input->post('sold_by')); //check this column contains user_id of sold_by merchant ensure this exist in db
+        //if sold_by or sold_to values are not provided, get the values of each using email and phone of both
+        //write two methods to get info of by and to
+
+	$sold_to = trim ( $this->input->post('sold_to')); //check this colum contains user_id of sold_to merchant ensure this exist in db
+	$quantity = trim ( $this->input->post('quantity'));
+	$metal = trim ( $this->input->post ( 'metal' ) ); //check this column maps to groups table, ensure its record is already present
+	$purity = trim ( $this->input->post ( 'purity' ) );
+	$amount_paid = trim ( $this->input->post ( 'amount_paid' ) );
+	$amount_pending = trim ( $this->input->post ( 'amount_pending' ) );
+ 
+	$payment_type = trim ( $this->input->post ( 'payment_type' ) ); //check this column maps to group tables, ensure its existence
+        
+	$return_good = trim ( $this->input->post ( 'return_good' ) );
+	
+        // to reterive userid using phone or email, method is already written,so using that method
+        //this can be done using access_token as well 
+        //use your preferred method
+        $phone = trim ( $this->input->post ( 'phone' ) );
+	$email = trim ( $this->input->post ( 'email' ) );
+        $access_array['phone'] = $phone
+        $access_array['email'] = $email
+
+
+        //construct an array with obtained fields and default fields
+
+	$validate_array = array (
+			'sold_by' => $sold_by,
+			'sold_to' => $sold_to,
+			'quantity' => $qunatity,
+			'metal' => $metal
+			'purity' => $purity
+			'amount_paid' => $amount_paid
+			'amount_pending' => $amount_pending
+			'payment_type' => $payment_type
+			'return_good' => $return_good
+	);
+	/*$this->response ( array (
+						'type' => 'auth',
+						'id' => 'id',
+						'data' => $validate_array
+				), SUCCESS_OK );;exit;
+	*/
+	if (check_empty_values ( $validate_array )) {
+		$this->generateErrorMessage ( BAD_REQUEST, "Some fields are missing" );
+	}
+	//$validate_array['device_id'] = $device_id;
+	$validate_array['created_at'] = date('Y-m-d H:m:i');
+	$validate_array['updated_at'] = date('Y-m-d H:m:i');
+	$validate_array['row_status'] = 1;
+
+        
+	//echo $this->users->AddUser($validate_array);
+        //call add_sale method present in sales file with validate_array and access_token as arguments
+	$result = $this->sales->add_sale($validate_array, $access_token,$access_array);
+	if($result == false)
+		$this->generateErrorMessage(BAD_REQUEST, "Unable to add sale row");
+	else
+		$this->response ( array (
+						'type' => 'auth',
+						'id' => 'id',
+						'data' => $result
+				), SUCCESS_OK );
+	//echo $user_session_id;
+}
+
+
+
+function stock_post() {
+        //capture data from post request
+        //check whether access_toke is in header or body
+        $headers = getallheaders();
+        $access_token = trim( $headers['access_token'] );
+        //$access_token = trim ( $this->input->post('access_token'));
+
+
+        //check whether access_token is valid or not
+        //if not raise badrequest error
+        if($this->users->checkAccessTokenExist($access_token))
+                $this->response ( array (
+                                                'type' => 'states',
+                                                'id' => 'id',
+                                                'data' => $this->states->getAllStates()
+                                ), SUCCESS_OK );
+        else
+                $this->generateErrorMessage(BAD_REQUEST, "Invalid Access Token");
+        
+
+        $phone = trim ( $this->input->post ( 'phone' ) );
+	$email = trim ( $this->input->post ( 'email' ) );
+        $access_array['phone'] = $phone
+        $access_array['email'] = $email
+
+	$user_id = trim ( $this->input->post('user_id')); //check this colum contains user_id of sold_to merchant ensure this exist in db
+	$stock = trim ( $this->input->post('stock'));
+	$metal = trim ( $this->input->post ( 'metal' ) ); //check this column maps to groups table, ensure its record is already present
+	$validate_array = array (
+			'user_id' => $user_id,
+			'stock' => $stock,
+			'metal' => $metal,
+
+        );
+        if (check_empty_values ( $validate_array )) {
+                $this->generateErrorMessage ( BAD_REQUEST, "Some fields are missing" );
+        }
+
+
+	$validate_array['created_at'] = date('Y-m-d H:m:i');
+
+	$validate_array['updated_at'] = date('Y-m-d H:m:i');
+	$validate_array['row_status'] = 1;
+
+	$result = $this->stocks->add_stock($validate_array, $access_token,$access_array);
+	if($result == false)
+		$this->generateErrorMessage(BAD_REQUEST, "Unable to add stock row");
+	else
+		$this->response ( array (
+						'type' => 'auth',
+						'id' => 'id',
+						'data' => $result
+				), SUCCESS_OK );
+}
+
+
+
+
+
 
 public function transact_post() {
 	$headers = getallheaders();
