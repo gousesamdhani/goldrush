@@ -33,7 +33,6 @@ class Sales extends CI_Model {
 	protected $users = "users";
 	protected $sales = "sales";
 	protected $materials_master = "materials_master";
-
 	protected $dates = "dates";
 	protected $order_materials = "order_materials";
 	protected $orders = "orders";
@@ -450,13 +449,11 @@ class Sales extends CI_Model {
 
                 $this->db->trans_begin();
 
-                $where_array['email'] = $access_array['email'];
-                $where_array['phone'] = $access_array['phone'];
+                $where_array['access_token'] = $access_token;
+                //$where_array['phone'] = $access_array['phone'];
 
                 //obtain the user_id of given email and phone
                 $user_id = $this->getUserId($where_array);
-
-
                 //echo $user_id;exit;
                 if($user_id)
                 	return false;
@@ -467,7 +464,7 @@ class Sales extends CI_Model {
                 //update sale_data with user_id ,if you want id as string 
                 //if id is integer , automatically gets the value
                 //$sale_data['id'] = $user_id
-            
+            	$sale_data['sold_by'] = $user_id;
                 $insert_res = $this->db->insert($this->sales, $sale_data);
                 // a row has been inserted sucessfully
                 // ask sam for explanation below code

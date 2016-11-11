@@ -199,6 +199,34 @@ class User_Sessions extends CI_Model {
 		}
 
     }
+
+	/**
+     * Checking authentication-token exists or not
+     *
+     * @param
+     *        	string auth-token
+     * @return true / false
+     */
+    public function checkAccessTokenExist($user_access_token) {
+        if ($user_access_token == null)
+            return false;
+        $this->db->select('us.row_status, us.access_token', FALSE);
+        $this->db->from($this->user_sessions . ' us');
+        $this->db->where('us.access_token', $user_access_token);
+
+        $query = $this->db->get();
+        // $result = array();
+        $result = $query->row();
+        //print_r($result->row_status);
+
+        if (count($result) == 0 || $result->row_status == 0 /* || $result->logout_time != '' || $result->logout_time != null */) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+
     /**
      * Gets user weight data
       * @param  array $where_array where array

@@ -572,32 +572,6 @@ class Users extends CI_Model {
 	}
 	
 
-/**
-     * Checking authentication-token exists or not
-     *
-     * @param
-     *        	string auth-token
-     * @return true / false
-     */
-    public function checkAccessTokenExist($user_access_token) {
-        if ($user_access_token == null)
-            return false;
-        $this->db->select('us.logout_time, us.accesstoken', FALSE);
-        $this->db->from($this->user_sessions . ' us');
-        $this->db->where('us.accesstoken', $user_access_token);
-
-        $query = $this->db->get();
-        // $result = array();
-        $result = $query->row();
-        //print_r($result);exit;
-
-        if (count($result) == 0 || count($result->logout_time) == 1 /* || $result->logout_time != '' || $result->logout_time != null */) {
-            return false;
-        } else {
-            return true;
-        }
-    }
-
 	public function getUserSessionId($user_session_data){
 		try {
 			//print_r($user_session_data);exit;

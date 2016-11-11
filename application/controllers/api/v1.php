@@ -6,6 +6,7 @@ function __construct() {
 	$this->load->model ( 'users' );
 	$this->load->model ( 'sales' );
 	$this->load->model ( 'stock' );
+    $this->load->model ('user_sessions');
 	$this->load->model ( 'materials_master' );
 	$this->load->helper ( 'url' );
 	$this->load->model ( 'states' );
@@ -70,25 +71,19 @@ function newAuth_post() {
 }
 
 function sales_post() {
-        //capture data from post request
-        //check whether access_toke is in header or body
-        $headers = getallheaders();
-        $access_token = trim( $headers['access_token'] );
+    //capture data from post request
+    //check whether access_toke is in header or body
+    $headers = getallheaders();
+    $access_token = trim( $headers['access_token'] );
 	//$access_token = trim ( $this->input->post('access_token'));
         
  
-        //check whether access_token is valid or not
-        //if not raise badrequest error
-        if($this->users->checkAccessTokenExist($access_token))
-                $this->response ( array (
-                                                'type' => 'states',
-                                                'id' => 'id',
-                                                'data' => $this->states->getAllStates()
-                                ), SUCCESS_OK );
-        else
-                $this->generateErrorMessage(BAD_REQUEST, "Invalid Access Token");
+    //check whether access_token is valid or not
+    //if not raise badrequest error
+    if(!$this->user_sessions->checkAccessTokenExist($access_token))
+        $this->generateErrorMessage(BAD_REQUEST, "Invalid Access Token");
 
-	$sold_by = trim ( $this->input->post('sold_by')); //check this column contains user_id of sold_by merchant ensure this exist in db
+	//$sold_by = trim ( $this->input->post('sold_by')); //check this column contains user_id of sold_by merchant ensure this exist in db
         //if sold_by or sold_to values are not provided, get the values of each using email and phone of both
         //write two methods to get info of by and to
 
@@ -98,32 +93,28 @@ function sales_post() {
 	$purity = trim ( $this->input->post ( 'purity' ) );
 	$amount_paid = trim ( $this->input->post ( 'amount_paid' ) );
 	$amount_pending = trim ( $this->input->post ( 'amount_pending' ) );
- 
 	$payment_type = trim ( $this->input->post ( 'payment_type' ) ); //check this column maps to group tables, ensure its existence
-        
-	$return_good = trim ( $this->input->post ( 'return_good' ) );
+	$return_item = trim ( $this->input->post ( 'return_item' ) );
 	
-        // to reterive userid using phone or email, method is already written,so using that method
-        //this can be done using access_token as well 
-        //use your preferred method
-        $phone = trim ( $this->input->post ( 'phone' ) );
+    // to reterive userid using phone or email, method is already written,so using that method
+    //this can be done using access_token as well 
+    //use your preferred method
+    $phone = trim ( $this->input->post ( 'phone' ) );
 	$email = trim ( $this->input->post ( 'email' ) );
-        $access_array['phone'] = $phone
-        $access_array['email'] = $email
+    $access_array['access_token'] = $access_token;
+    $access_array['email'] = $email;
 
 
-        //construct an array with obtained fields and default fields
-
+    //construct an array with obtained fields and default fields
 	$validate_array = array (
-			'sold_by' => $sold_by,
 			'sold_to' => $sold_to,
 			'quantity' => $qunatity,
-			'metal' => $metal
-			'purity' => $purity
-			'amount_paid' => $amount_paid
-			'amount_pending' => $amount_pending
-			'payment_type' => $payment_type
-			'return_good' => $return_good
+			'metal' => $metal,
+			'purity' => $purity,
+			'amount_paid' => $amount_paid,
+			'amount_pending' => $amount_pending,
+			'payment_type' => $payment_type,
+			'return_item' => $return_item
 	);
 	/*$this->response ( array (
 						'type' => 'auth',
@@ -142,7 +133,7 @@ function sales_post() {
         
 	//echo $this->users->AddUser($validate_array);
         //call add_sale method present in sales file with validate_array and access_token as arguments
-	$result = $this->sales->add_sale($validate_array, $access_token,$access_array);
+	$result = $this->sales->add_sale($validate_array, $access_token, $access_array);
 	if($result == false)
 		$this->generateErrorMessage(BAD_REQUEST, "Unable to add sale row");
 	else
@@ -178,8 +169,8 @@ function stock_post() {
 
         $phone = trim ( $this->input->post ( 'phone' ) );
 	$email = trim ( $this->input->post ( 'email' ) );
-        $access_array['phone'] = $phone
-        $access_array['email'] = $email
+        $access_array['phone'] = $phone;
+        $access_array['email'] = $email;
 
 	$user_id = trim ( $this->input->post('user_id')); //check this colum contains user_id of sold_to merchant ensure this exist in db
 	$stock = trim ( $this->input->post('stock'));

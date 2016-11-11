@@ -85,6 +85,8 @@ $route['sales'] = "api/v1/sales";
 $route['stock'] = "api/v1/stock";
 
 
+
+
 $route['users/states'] = "api/v1/getStates";
 $route['users/states/(:num)/districts'] = "api/v1/getDistricts/$1";
 $route['users/states/(:num)/districts/(:num)/areas'] = "api/v1/getAreas/$1/$2";
