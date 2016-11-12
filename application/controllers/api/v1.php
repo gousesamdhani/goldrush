@@ -35,12 +35,12 @@ function getCurrentTime($operator, $hours, $minutes) {
 function newAuth_post() {
 	$phone = trim ( $this->input->post('phone'));
 	$username = trim ( $this->input->post('username'));
-	$email = trim ( $this->input->post ( 'email' ) );
+	// $email = trim ( $this->input->post ( 'email' ) );
 	$password = trim ( $this->input->post ( 'password' ) );
 	//$device_id = trim ( $this->input->post ( 'device_id' ) );
 	$user_type = trim ( $this->input->post('user_type'));
 	$validate_array = array (
-			'email' => $email,
+			//'email' => $email,
 			'password' => $password,
 			'username' => $username,
 			'phone' => $phone

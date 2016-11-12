@@ -136,7 +136,7 @@ class Users extends CI_Model {
      * @return array
      */
     public function authentication($where_array = array()) {
-        $this->db->select('id, email, password, username, phone');
+        $this->db->select('id, password, username, phone');
         $this->db->from('users');
 
         if (count($where_array) > 0) {
@@ -198,7 +198,6 @@ class Users extends CI_Model {
     }
 
 
-    
     /**
      * Gets user weight data
       * @param  array $where_array where array
@@ -449,7 +448,7 @@ class Users extends CI_Model {
 
                 $this->db->trans_begin();
 
-                $where_array['email'] = $user_data['email'];
+                #$where_array['email'] = $user_data['email'];
                 $where_array['phone'] = $user_data['phone'];
 
                 $user_id = $this->getUserId($where_array);

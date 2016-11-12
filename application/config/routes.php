@@ -84,7 +84,12 @@ $route['usersessions'] = "api/v1/usersessions";
 $route['sales'] = "api/v1/sales";
 $route['stock'] = "api/v1/stock";
 
-
+//for GOLD WEB
+$route['home'] = "web/home";
+$route['home/logout'] = "web/home/logout";
+$route['user_login'] = "web/login";
+$route['user_signup'] = "web/signup";
+$route['profile'] = "web/profile";
 
 
 $route['users/states'] = "api/v1/getStates";
