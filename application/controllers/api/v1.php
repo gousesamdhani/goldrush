@@ -18,7 +18,7 @@ function __construct() {
 }
 
 function getCurrentTime($operator, $hours, $minutes, $test) {
-	$test ;
+	$test =
 	$timezone = '%%operator%%%%hours%% hours %%minutes%% minutes';
 	$timezone = str_replace ( "%%operator%%", $operator, $timezone );
 	$timezone = str_replace ( "%%hours%%", $hours, $timezone );
